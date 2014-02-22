@@ -1,0 +1,39 @@
+{
+  "name": "pivotal-helper",
+  "version": "0.0.0",
+  "description": "An application to help managers and scrum masters in the agile process, with tools to generate Story Board cards, and Task based Burn Down charts",
+  "main": "app.js",
+  "scripts": {
+    "test": "node_modules\\.bin\\mocha -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VigneshThanigaimaniGE/pivotal-helper.git"
+  },
+  "keywords": [
+    "pivotal",
+    "tracker",
+    "story",
+    "board",
+    "pivotal",
+    "api",
+    "node.js",
+    "express",
+    "angular"
+  ],
+  "author": "Vignesh Thanigaimani",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/VigneshThanigaimaniGE/pivotal-helper/issues"
+  },
+  "dependencies": {
+    "express": "~3.4.8",
+    "jade": "~1.1.5",
+    "mocha": "~1.17.1",
+    "mongoose": "~3.8.7",
+    "should": "~3.1.2",
+    "stylus": "~0.42.2",
+    "supertest": "~0.9.0",
+    "request": "~2.34.0"
+  }
+}

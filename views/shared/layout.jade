@@ -1,0 +1,12 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		block styles
+	body
+		block content
+	
+	script(src='/javascripts/angular.min.js')
+	script(src='/javascripts/pivotal-angular-app/app.js')
+	block scripts

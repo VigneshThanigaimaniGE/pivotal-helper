@@ -1,0 +1,8 @@
+extends ../shared/layout
+block scripts
+	script(src='/javascripts/pivotal-angular-app/controllers/home.js')
+block content
+	div(ng-app='gePivotalApp',ng-controller='home')
+		h1= title
+		p Welcome to #{title}
+		p {{message}}
