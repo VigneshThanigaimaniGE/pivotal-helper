@@ -9,7 +9,8 @@ Run `npm test` to run tests, to see if everything works fine.
 ###API Helper
 Small example on how to use the library. 
 First call the static method `getUser()` which will also set the `token` for further api calls. see the apiHelper.js to see all currently implemented functions. 
-
+ 
+  
     var Pivotal = require("../helpers/apiHelper");
     var pivotal = null;
     Pivotal.getUser("username","password",function(error,user){
@@ -19,3 +20,15 @@ First call the static method `getUser()` which will also set the `token` for fur
       });
     });
 
+###Login
+
+Uses the [`passport`](https://www.npmjs.org/package/passport) module, with `LocalStrategy` 
+
+This project does not store any user data now, and definitely will not store the user's password in the db.
+
+
+###To automatically restart the nodejs server, while making changes to code,
+
+Install the [`supervisor`](https://www.npmjs.org/package/supervisor) module globally by running `npm install -g supervisor`
+
+Then run `npm start` or `supervisor app.js` to keep the node.js running forever.
