@@ -1,0 +1,18 @@
+extends ../shared/layout
+block content
+
+	form(method="POST",action="/login")
+		div
+			span
+			|Username
+			input(type='text',name='username')
+		div
+			span
+			|Password
+			input(type='password',name="password")
+		div
+			input(type='submit',value="Submit")
+		pre
+			!{user}
+		pre 
+			!{message}

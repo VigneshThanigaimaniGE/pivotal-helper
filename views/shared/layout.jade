@@ -5,6 +5,9 @@ html
 		link(rel='stylesheet', href='/stylesheets/style.css')
 		block styles
 	body
+		if user
+			div.header-logged-in
+				a(href='/logout') Logout
 		block content
 	
 	script(src='/javascripts/angular.min.js')

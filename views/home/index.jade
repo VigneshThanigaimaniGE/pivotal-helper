@@ -1,8 +1,16 @@
 extends ../shared/layout
 block scripts
+	script.
+		var userObj = !{JSON.stringify(user)};
 	script(src='/javascripts/pivotal-angular-app/controllers/home.js')
 block content
 	div(ng-app='gePivotalApp',ng-controller='home')
 		h1= title
-		p Welcome to #{title}
+		p Welcome !{user.name}
 		p {{message}}
+
+		div
+			for project in user.projects
+				li
+					a(href="/project/#{project.project_id}")
+						!{project.project_name}

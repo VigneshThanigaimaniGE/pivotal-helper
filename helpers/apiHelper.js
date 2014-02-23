@@ -33,6 +33,7 @@ Pivotal.getUser = function(){
 			};
 			callback = arguments[2];
 		}
+		
 		Pivotal.apiCall("/me",options,callback,token);	
 	}
 	catch(e){
@@ -78,15 +79,16 @@ Pivotal.apiCall = function(url,opts,cb,token){
 	}
 	//make the call
 	request(options,function(error,response,data){
-		if(error != null || response.statusCode!=200){
-			throw {
-					message:(error? error.message:null || JSON.stringify(response.body)),
-					code:(response ? response.statusCode : null || null)
-				};
-			/*cb({
-				status: (response? response.statusCode : null) || null, 
-				message: (error? error.message : null) || JSON.stringify(response)
-			},null);*/
+		// console.log('request// options: '+JSON.stringify(options)+
+		// 	"error: "+(error||"")+
+		// 	"response: "+(response.statusCode || "")+
+		// 	"data: "+(data||""))
+		if(error != null){
+			cb(error,null);
+			return;
+		}
+		if(response && response.statusCode!=200){
+			cb({message:response.body, code:response.statusCode},null);
 			return;
 		}
 		var parsedData = JSON.parse(data);
