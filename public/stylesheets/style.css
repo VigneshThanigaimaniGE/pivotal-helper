@@ -1,3 +1,6 @@
+* {
+  font-family: "Quattrocento Sans", Helvetica, Arial, sans-serif;
+}
 body {
   font: 14px "Quattrocento Sans", Helvetica, Arial, sans-serif;
 }
@@ -33,7 +36,6 @@ a {
 }
 .signin.inner .submit.button {
   width: 100%;
-  font: 14px "Quattrocento Sans", Helvetica, Arial, sans-serif;
 }
 .signin.inner li.error-message {
   color: #f00;
