@@ -7,6 +7,8 @@ module.exports.controller = function(app){
 	});
 
 	app.get('/login',function(req,res){
+		if(req.isAuthenticated())
+			return res.redirect("/");
 		res.render('home/login',{title:"Login",user:req.user,message:req.session.messages});
 	});
 
@@ -17,7 +19,7 @@ module.exports.controller = function(app){
 	//	curl -v -d "username=something&password=secret" http://localhost:3000/login
 
 	app.post('/login',function(req,res,next){
-		
+
 		passport.authenticate('local',function(err,user,info){
 			
 			if(err){
