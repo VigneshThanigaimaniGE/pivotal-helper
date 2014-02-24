@@ -134,13 +134,24 @@ describe("User login flow",function(){
 	})
 });
 
-describe.skip("Project page",function(){
+describe.only("Project page",function(){
+	var loggedInAgent ;
+	this.timeout(5000);
+	before(function(done){
+		loggedInAgent = request.agent(app);
+		loggedInAgent.post('/login').send({
+			username:config.test.username,
+			password:config.test.password
+		}).end(function(err,res){
+			done();
+		});
+	})
 	it("navigating to particular project, should be successful",function(done){
-		var agent = request.agent(app);
-		agent.get("/project/"+config.test.project_id).end(function(err,res){
+		
+		loggedInAgent.get("/project/"+config.test.projectId).end(function(err,res){
 			should.not.exist(err);
-			res.header['location'].should.include("/project/"+config.test.project_id);
-
+			res.statusCode.should.equal(200);
+			res.should.be.ok;
 			done();
 		});
 	});

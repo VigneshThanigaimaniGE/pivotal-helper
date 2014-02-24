@@ -1,0 +1,12 @@
+extends ../shared/layout
+block scripts
+	script.
+		var renderedStories = !{JSON.stringify(stories)};
+	script(src='/javascripts/pivotal-angular-app/directives/storycard.js')
+	script(src='/javascripts/pivotal-angular-app/controllers/stories.js')
+
+block content
+	div(ng-app='gePivotalApp',ng-controller='stories')
+		storycard(data-ng-repeat="story in stories", data-ng-if="stories.length>0")
+		div(data-ng-if="stories.length==0")
+			|You have no stories in this project in the current sprint

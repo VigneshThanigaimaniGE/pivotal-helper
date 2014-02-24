@@ -57,9 +57,18 @@ Pivotal.prototype.apiCall = function(url,opts,cb){
 
 Pivotal.prototype.getMyStories = function(projectId,callback){
 	var url= "/projects/"+projectId+"/stories";
-	url = url += "?filter=owned_by:"+this.user.id;
+	url = appendParam(url,"filter",["owned_by:"+this.user.id]);
+	url = appendParam(url,"fields",[":default,requested_by,owned_by,tasks"]);
 	this.apiCall(url,null,callback);
 
+}
+var appendParam = function(url,paramName, paramValue){
+	var finalUrl;
+	if(url.indexOf("?")==-1)
+		finalUrl = url + "?"+paramName+"="+paramValue.join(",");
+	else
+		finalUrl = url+"&"+paramName+"="+paramValue.join(",");
+	return finalUrl;
 }
 Pivotal.apiCall = function(url,opts,cb,token){
 	var options = {

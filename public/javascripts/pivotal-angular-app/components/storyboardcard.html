@@ -1,0 +1,6 @@
+<div class="storyboardcard">
+	<div>{{story.name}}</div>
+	<div>Requested by: {{story.requested_by.name}}</div>
+	<div>Owned by: {{story.owned_by.name}}</div>
+	<div data-ng-repeat="task in story.tasks">[{{task.complete?"X":" "}}]{{task.description}} </div>
+</div>
