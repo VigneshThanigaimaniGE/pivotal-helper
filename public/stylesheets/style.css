@@ -1,5 +1,5 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Quattrocento Sans", Helvetica, Arial, sans-serif;
 }
 a {
   color: #00b7ff;
@@ -33,6 +33,7 @@ a {
 }
 .signin.inner .submit.button {
   width: 100%;
+  font: 14px "Quattrocento Sans", Helvetica, Arial, sans-serif;
 }
 .signin.inner li.error-message {
   color: #f00;
