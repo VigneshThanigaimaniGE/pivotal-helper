@@ -1,9 +1,16 @@
 var passport = require('passport');
 var loginHelper = require("../helpers/loginHelper");
 var Pivotal = require("../helpers/apiHelper");
+var RedisHelper = require("../helpers/redisHelper");
 module.exports.controller = function(app){
 	app.get('/',loginHelper.ensureAuthenticated,function(req,res){
-		res.render('home/index',{title: "GlobalEnglish PivotalTracker Helper",user:req.user,message:req.session.messages});
+		
+		RedisHelper.getGravatarEmail(req.user.username,function(err,email){
+			var user = req.user;
+			user.gravatarEmail = email;
+			res.render('home/index',{title: "GlobalEnglish PivotalTracker Helper",user:user,message:req.session.messages});
+		});
+		
 	});
 
 	app.get('/login',function(req,res){
@@ -20,6 +27,7 @@ module.exports.controller = function(app){
 
 	app.post('/login',function(req,res,next){
 
+		
 		passport.authenticate('local',function(err,user,info){
 			
 			if(err){
@@ -31,9 +39,15 @@ module.exports.controller = function(app){
 				req.session.messages = [info.message];
 				return res.redirect('/login');
 			}
+			
 			req.logIn(user,function(err){
 				if(err) 
 					return next(err);
+				
+				var gravatarEmail = req.body.gravatar;
+				if(gravatarEmail)
+					RedisHelper.setGravatarEmail(req.user.username,gravatarEmail);
+				
 				return res.redirect("/");
 			});
 		})(req,res,next);

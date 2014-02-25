@@ -4,7 +4,7 @@
   "description": "An application to help managers and scrum masters in the agile process, with tools to generate Story Board cards, and Task based Burn Down charts",
   "main": "app.js",
   "scripts": {
-    "start":"supervisor app.js",
+    "start": "supervisor app.js",
     "test": "node_modules\\.bin\\mocha -w"
   },
   "repository": {
@@ -37,6 +37,7 @@
     "supertest": "~0.9.0",
     "request": "~2.34.0",
     "passport": "~0.2.0",
-    "passport-local": "~0.1.6"
+    "passport-local": "~0.1.6",
+    "redis": "~0.10.1"
   }
 }

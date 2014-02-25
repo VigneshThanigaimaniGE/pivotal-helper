@@ -4,7 +4,7 @@ GlobalEnglish PivotalTracker Helper
 Run `npm update` after cloning the repo to install necessary modules.
 
 Run `npm test` to run tests, to see if everything works fine. 
-> Before testing, edit the config.js file, and add your pivotal tracker username and password. (Do not forget to remove your real username and password before committing to github)
+> Before testing, edit the config.js file, and add your pivotal tracker username and password. (Do not forget to remove your real username and password before committing to github). Also add the Redis server host and port number (I have created a redis server in RedisLabs.com)
 
 ###API Helper
 Small example on how to use the library. 
