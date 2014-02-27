@@ -6,8 +6,8 @@ var config = {
 		projectId:"put_projectId_here"
 	},
 	redis:{
-		port:process.env.REDIS_PORT || "port_number",
-		host:process.env.REDIS_HOST || "host"
+		port:process.env.REDIS_PORT || 18708,
+		host:process.env.REDIS_HOST || "pub-redis-18708.us-central1-1-1.gce.garantiadata.com"
 	}
 }
 module.exports = config;
