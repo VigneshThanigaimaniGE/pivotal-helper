@@ -10,9 +10,14 @@ html
 	body
 		div.wraper
 			div.container
-				div.header
-					img(src="/images/gelogo.png" class="logo ge" alt="GlobalEnglish")
-					img(src="/images/pivotal_logo.png" class="logo pt" alt="Pivotal Tracker")
+				div.header.default-shadow-header
+					a(href='/')
+						img(src="/images/gelogo.png" class="logo ge" alt="GlobalEnglish")
+						img(src="/images/pivotal_logo.png" class="logo pt" alt="Pivotal Tracker")
+					if user
+						div.logout-link
+							a(href="/logout")
+								|Logout
 				block content
 			div.footer
 				img(src="/images/always.png" class="logo al" alt="Always Learning")
@@ -21,4 +26,5 @@ html
 	script(src='/javascripts/angular.min.js')
 	script(src='/javascripts/lib/extensions.js')
 	script(src='/javascripts/pivotal-angular-app/app.js')
+	script(src='/javascripts/pivotal-angular-app/directives/helper-directives.js')
 	block scripts

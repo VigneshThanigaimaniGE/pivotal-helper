@@ -16,7 +16,9 @@ module.exports.controller = function(app){
 	app.get('/login',function(req,res){
 		if(req.isAuthenticated())
 			return res.redirect("/");
-		res.render('home/login',{title:"Login",user:req.user,message:req.session.messages});
+		var messages= req.session.messages;
+		delete req.session.messages; //to avoid showing the same message in further get requests.
+		res.render('home/login',{title:"Login",user:req.user,message:messages});
 	});
 
 	//POST /login

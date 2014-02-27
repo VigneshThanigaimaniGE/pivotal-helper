@@ -6,8 +6,8 @@ var config = {
 		projectId:"put_projectId_here"
 	},
 	redis:{
-		port:"port_number_here",
-		host:"host_name_here"
+		port:process.env.REDIS_PORT || "port_number",
+		host:process.env.REDIS_HOST || "host"
 	}
 }
 module.exports = config;

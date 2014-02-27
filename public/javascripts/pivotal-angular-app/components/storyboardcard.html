@@ -1,7 +1,7 @@
 <div class="printMe">
 	<div class="storycard board-view">
 		<div class="image">
-			<img src="/images/dhanu.jpg">
+			<img err-src="/images/default-profile.png" data-ng-src="{{gravatarUrl}}"/>
 			<p>{{story.owned_by.name}}</p>
 		</div>
 		<div class="story-info">
@@ -11,7 +11,7 @@
 			</div>
 			<div class="story-info-div">
 				<p>Point</p>
-				<p>{{story.estimate}}</p>
+				<p>{{story.estimate || "NA"}}</p>
 			</div>
 			<div class="story-info-div requested-by">
 				<p>Requested By</p>
@@ -26,13 +26,13 @@
 	<div class="divider"></div>
 	<div class="storycard desk-view">
 		<div class="image">
-			<img src="/images/dhanu.jpg">
+			<img err-src="/images/default-profile.png" data-ng-src="{{gravatarUrl}}"/>
 			<p>{{story.owned_by.name}}</p>
 			<div class="info">
 				<span>Type</span>
 				<span>{{story.story_type}}</span>
 				<span>Point</span>
-				<span>{{story.estimate}}</span>
+				<span>{{story.estimate || "NA"}}</span>
 				<span>Requested By</span>
 				<span>{{story.requested_by.name}}</span>
 			</div>

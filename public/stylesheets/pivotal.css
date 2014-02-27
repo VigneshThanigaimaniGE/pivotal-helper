@@ -8,7 +8,7 @@ body, html, .wraper {position:relative; height:100%; font-family: arial, helveti
 .content {margin:2% 3%; width:94%; padding-bottom: 40px; position: relative;}
 .header, .footer {padding: 10px;}
 .logo {float: left;}
-.pt, .pe, .username {float: right;}
+.pe{float: right;}
 img, fieldset, input[type=submit], button {border:0;}
 button, input[type=submit] {background-color: transparent; cursor: pointer;}
 .loginForm {
@@ -26,7 +26,7 @@ input[type=checkbox] {
 display:inline;
 margin-right:5px;
 }
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type="email"] {
 border:1px solid #ccc;
 padding:10px;
 }
@@ -63,7 +63,7 @@ clear: both;
 .board-view { height: 200px;}
 .desk-view {height: 350px;}
 .image {width: 151px; height: 100%; float: left; border-right: solid 1px;}
-.image img { height: 150px; width: 150px;}
+.image img { width:100%;}
 .image p {font-size:1.35em; text-align: center;}
 .desk-view .image {width: 25%;}
 .desk-view .image > p {border-bottom: solid 1px;}
@@ -75,9 +75,19 @@ clear: both;
 .story-info div p {width: 100%; font-size: 1.2em; text-align: center; border-bottom: solid 1px; border-right: solid 1px;}
 .story-info div:last-child p {border-right: 0;}
 .story .title {text-align: left; text-decoration: underline; font-size: 1.1em; padding: 10px;}
-.story p {padding-left: 5px;}
+.story p {padding-left: 5px; font-size:16px;}
 .task {width: 60%; float: left; margin: 10px 0 0 0;}
 .task ul {padding-left: 20px;}
-li {list-style: none;}
+li {list-style: none; line-height:1.7;}
 .info span {height: auto;}
 .printBtn {text-align:center; margin-bottom:40px;}
+
+
+.logo.ge {
+	width:156px;
+	margin-right:25px;
+}
+.logo.pt{
+	width:180px;
+	float:left;
+}

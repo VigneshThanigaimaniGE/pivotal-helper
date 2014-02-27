@@ -8,19 +8,20 @@ block content
 			form(method="POST",action="/login")
 				ul
 					li
-						input(type='text',name='username', placeholder="Email or username")
+						input(type='text', required,name='username', placeholder="Email or username")
 					li
-						input(type='password',name="password", placeholder = "Password")
+						input(type='password',required,name="password", placeholder = "Password")
 
 					li
-						input(type='email',valid=true,name="gravatar", placeholder = "Gravatar email-id (optional)",title="Required for profile picture",
+						input(type='email',valid=true,name="gravatar", placeholder = "Gravatar email-id (optional)",title="Used for profile picture",
 							pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$")
 
 					li
-						button.submit.button(type='submit') Sign In
+						button.button(type='submit')
+							span.btn-roundedCorner Sign In
 					li
 						|Don't have a Gravatar account? Get one at 
-						a(href="http://en.gravatar.com") Gravatar.com
+						a(href="http://en.gravatar.com",target="_blank") Gravatar.com
 					li
 						!{user}
 					li.error-message 
