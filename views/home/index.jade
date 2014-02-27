@@ -3,13 +3,31 @@ block scripts
 	script.
 		var userObj = !{JSON.stringify(user)};
 	script(src='/javascripts/pivotal-angular-app/controllers/home.js')
+	script(src='/javascripts/pivotal-angular-app/filters/filter.js')
 block content
 	div(ng-app='gePivotalApp',ng-controller='home')
-		h1= title
-		p Welcome !{user.name}
 		div
-			for project in user.projects
-				li
-					a(href="/project/#{project.project_id}")
-						!{project.project_name}
-		img.gravatar(data-ng-src="{{gravatarUrl}}")
+			h1= title
+			div.user-name 
+				img.gravatar(data-ng-src="{{gravatarUrl}}")
+				span
+					|Welcome !{user.name}
+		div.wrap.cards-container.row
+			//-for project in user.projects
+			a.card.span_4.radius_06.default-shadow.col-md-4.col-xs-6(data-ng-cloak, data-ng-repeat="project in projects",href='/project/{{project.project_id}}',
+				style="")
+				//-background:#{{project.project_color}}
+				div.bold.card-title(style="background:#{{project.project_color}}")
+						{{project.project_name}}
+				div.card-inner-container
+					div.margin-tb-10
+						|Last Viewed: 
+						b
+							{{"" | addLastViewed : (project.last_viewed_at)}}
+					div.margin-tb-10
+						|Role: 
+						b
+							{{project.role}}
+					div.color-tag(style="background-color:#{{project.project_color}}")
+
+		
