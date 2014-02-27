@@ -3,14 +3,21 @@ html
 	head
 		title= title
 		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/pivotal.css')
+		link(rel='stylesheet', href='/stylesheets/print.css', media='print')
 		link(href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700', rel='stylesheet', type='text/css')
 		block styles
 	body
-		if user
-			div.header-logged-in
-				a(href='/logout') Logout
-		block content
-	
+		div.wraper
+			div.container
+				div.header
+					img(src="/images/gelogo.png" class="logo ge" alt="GlobalEnglish")
+					img(src="/images/pivotal_logo.png" class="logo pt" alt="Pivotal Tracker")
+				block content
+			div.footer
+				img(src="/images/always.png" class="logo al" alt="Always Learning")
+				img(src="/images/pearson_logo.png" class="logo pe" alt="Pearson")
+
 	script(src='/javascripts/angular.min.js')
 	script(src='/javascripts/lib/extensions.js')
 	script(src='/javascripts/pivotal-angular-app/app.js')

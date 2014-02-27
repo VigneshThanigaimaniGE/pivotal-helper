@@ -6,7 +6,12 @@ block scripts
 	script(src='/javascripts/pivotal-angular-app/controllers/stories.js')
 
 block content
-	div(ng-app='gePivotalApp',ng-controller='stories')
-		storycard(data-ng-repeat="story in stories", data-ng-if="stories.length>0")
+	div.content(ng-app='gePivotalApp',ng-controller='stories')
+		img.gravatar(data-ng-src="{{user.gravatarUrl}}")
+		div.printBtn
+			button.btn-roundedCorner(onclick="javascript:window.print();")
+				|Print Story
+		div.printablediv
+			storycard(data-ng-repeat="story in stories", data-ng-if="stories.length>0")
 		div(data-ng-if="stories.length==0")
 			|You have no stories in this project in the current sprint

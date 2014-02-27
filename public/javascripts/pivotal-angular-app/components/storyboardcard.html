@@ -1,6 +1,50 @@
-<div class="storyboardcard">
-	<div>{{story.name}}</div>
-	<div>Requested by: {{story.requested_by.name}}</div>
-	<div>Owned by: {{story.owned_by.name}}</div>
-	<div data-ng-repeat="task in story.tasks">[{{task.complete?"X":" "}}]{{task.description}} </div>
+<div class="printMe">
+	<div class="storycard board-view">
+		<div class="image">
+			<img src="/images/dhanu.jpg">
+			<p>{{story.owned_by.name}}</p>
+		</div>
+		<div class="story-info">
+			<div class="story-info-div">
+				<p>Type</p>
+				<p>{{story.story_type}}</p>
+			</div>
+			<div class="story-info-div">
+				<p>Point</p>
+				<p>{{story.estimate}}</p>
+			</div>
+			<div class="story-info-div requested-by">
+				<p>Requested By</p>
+				<p>{{story.requested_by.name}}</p>
+			</div>
+		</div>
+		<div class="story">
+			<p class="title">Story</p>
+			<p>{{story.name}}</p>
+		</div>
+	</div>
+	<div class="divider"></div>
+	<div class="storycard desk-view">
+		<div class="image">
+			<img src="/images/dhanu.jpg">
+			<p>{{story.owned_by.name}}</p>
+			<div class="info">
+				<span>Type</span>
+				<span>{{story.story_type}}</span>
+				<span>Point</span>
+				<span>{{story.estimate}}</span>
+				<span>Requested By</span>
+				<span>{{story.requested_by.name}}</span>
+			</div>
+		</div>
+		<div class="story">
+			<p class="title">Story</p>
+			<p>{{story.name}}</p>
+		</div>
+		<div class="task">
+			<ul>
+				<li data-ng-repeat="task in story.tasks"><label><input type="checkbox" />{{task.description}}</label></li>
+			</ul>
+		</div>
+	</div>
 </div>

@@ -1,0 +1,83 @@
+
+*{padding:0; margin:0;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;-o-box-sizing:border-box;}
+body, html, .wraper {position:relative; height:100%; font-family: arial, helvetica, sans-serif; font-size: 14px;}
+.wraper, .container, .header, .content, .footer {width:100%; clear:both; float:left;}
+.container {min-height:100%;}
+.footer {background-color: #444;height:40px; margin-top: -40px;}
+.header {background-color: #fff;}
+.content {margin:2% 3%; width:94%; padding-bottom: 40px; position: relative;}
+.header, .footer {padding: 10px;}
+.logo {float: left;}
+.pt, .pe, .username {float: right;}
+img, fieldset, input[type=submit], button {border:0;}
+button, input[type=submit] {background-color: transparent; cursor: pointer;}
+.loginForm {
+width:240px;
+margin: 0 auto;
+position: relative;
+}
+input:focus, button:focus {
+outline:none;
+}
+input[type=text], input[type=password] {
+width:100%;
+}
+input[type=checkbox] {
+display:inline;
+margin-right:5px;
+}
+input[type=text], input[type=password] {
+border:1px solid #ccc;
+padding:10px;
+}
+input[type=checkbox] {
+float:left;
+margin-top:2px;
+}
+.loginForm label {
+padding-bottom:10px;
+display:none;
+}
+label.display_inline {
+display:inline;
+}
+fieldset {
+padding:10px 0;
+}
+[class^="btn-"] {
+display:inline-block;
+padding:10px;
+cursor:pointer;
+color:#fff;
+font-size:15px;
+background-color:#88c540;
+}
+.btn-roundedCorner {
+border-radius:5px;
+}
+.clear-both {
+clear: both;
+}
+.printMe {clear:both; width: 70%; margin:0 auto;}
+.storycard {border: solid 1px; width: 100%; clear: both; margin-bottom: 20px;}
+.board-view { height: 200px;}
+.desk-view {height: 350px;}
+.image {width: 151px; height: 100%; float: left; border-right: solid 1px;}
+.image img { height: 150px; width: 150px;}
+.image p {font-size:1.35em; text-align: center;}
+.desk-view .image {width: 25%;}
+.desk-view .image > p {border-bottom: solid 1px;}
+.desk-view .info span {width: 50%; float: left; font-size: 1.1em; padding-left: 5px; padding-bottom: 5px;}
+.desk-view .story {width: 75%; border-bottom: solid 1px; padding-bottom: 5px;}
+.story-info, .story {width: calc(100% - 151px); float: left;}
+.story-info-div {width: 30%; float: left;}
+.requested-by {width: 40%;}
+.story-info div p {width: 100%; font-size: 1.2em; text-align: center; border-bottom: solid 1px; border-right: solid 1px;}
+.story-info div:last-child p {border-right: 0;}
+.story .title {text-align: left; text-decoration: underline; font-size: 1.1em; padding: 10px;}
+.story p {padding-left: 5px;}
+.task {width: 60%; float: left; margin: 10px 0 0 0;}
+.task ul {padding-left: 20px;}
+li {list-style: none;}
+.info span {height: auto;}
+.printBtn {text-align:center; margin-bottom:40px;}
