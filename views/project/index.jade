@@ -2,16 +2,16 @@ extends ../shared/layout
 block scripts
 	script.
 		var renderedStories = !{JSON.stringify(stories)};
+		var userObj = !{JSON.stringify(user)};
 	script(src='/javascripts/pivotal-angular-app/directives/storycard.js')
 	script(src='/javascripts/pivotal-angular-app/controllers/stories.js')
 
 block content
-	div.content(ng-app='gePivotalApp',ng-controller='stories')
-		img.gravatar(data-ng-src="{{user.gravatarUrl}}")
+	div.content.print-page-wrap(ng-app='gePivotalApp',ng-controller='stories')
 		div.printBtn
 			button.btn-roundedCorner(onclick="javascript:window.print();")
-				|Print Story
+				|Print Stories
 		div.printablediv
 			storycard(data-ng-repeat="story in stories", data-ng-if="stories.length>0")
-		div(data-ng-if="stories.length==0")
+		div(data-ng-cloak, data-ng-if="stories.length==0")
 			|You have no stories in this project in the current sprint

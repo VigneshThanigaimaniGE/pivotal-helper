@@ -1,5 +1,6 @@
 var loginHelper = require("../helpers/loginHelper");
 var Pivotal = require("../helpers/apiHelper");
+var RedisHelper = require("../helpers/redisHelper");
 module.exports.controller = function(app){
 
 	app.get('/project/:project_id',loginHelper.ensureAuthenticated,function(req,res){
@@ -17,7 +18,13 @@ module.exports.controller = function(app){
 			
 			pivotal.getMyStories(projectId,function(err,stories){
 				
-				res.render("project/index",{title:projectName,stories:stories,user:req.user})
+				RedisHelper.getGravatarEmail(req.user.username,function(err,email){
+					var user = req.user;
+					user.gravatarEmail = email;
+					res.render("project/index",{title:projectName,stories:stories,user:user});
+				});
+
+				
 			});
 		}
 		catch(e){

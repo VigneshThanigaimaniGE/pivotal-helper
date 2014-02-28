@@ -10,9 +10,20 @@ a
 .storyboardcard
 	padding:20px 0
 
+
+.logout-link
+	float right
+
+.default-shadow-header
+	-webkit-box-shadow 0 2px 6px 0px rgba(0,0,0,0.16)
+	-moz-box-shadow 0 2px 6px 0px rgba(0,0,0,0.16)
+	box-shadow 0 2px 6px 0px rgba(0,0,0,0.16)
+
+
+
 /* Login form styles -- start */
 .dialog-wrap
-	width:333px
+	width:340px
 	margin: 75px auto 0 auto;
 	background: #e1e1e1
 	padding: 10px
@@ -40,12 +51,19 @@ a
 
 
 /* Home page styles -- start */
+.home 
+	.title
+		text-align center
+		margin 60px 0 10px 0
+.content-container
+	margin 20px
 .user-name
 	padding:10px
 	background:aliceblue
 	font-weight:bold
 	font-size:20px
 	margin-bottom:20px
+	border-radius: 8px
 	.gravatar 
 		margin-right:10px
 	span
@@ -129,3 +147,10 @@ a
 
 
 /* Home page styles -- end */
+
+
+/* Print page styles -- start*/
+.print-page-wrap *
+	font-family: arial, helvetica, sans-serif !important;
+
+/* Print page styles -- end */
