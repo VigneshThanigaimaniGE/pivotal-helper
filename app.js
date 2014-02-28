@@ -15,7 +15,7 @@ var express = require('express'),
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
-app.use(express.favicon());
+app.use(express.favicon('public/images/favicon.gif'));
 app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
