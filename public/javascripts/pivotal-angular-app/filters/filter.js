@@ -1,9 +1,7 @@
 app.filter('addLastViewed',function(){
 	return function(placeholder, num1){
-		var passedDateObj = new Date(num1);
-		var passedDate = passedDateObj.getDate();
-		var todayDate = new Date(Date.now());
-		var difference = todayDate.getDate() - passedDate;
+		var passedDate = new Date(num1);
+		var difference = Math.floor((Date.now() - passedDate )/(60*60*24*1000));
 		switch(difference){
 			case 0:
 				return placeholder+" Today";
