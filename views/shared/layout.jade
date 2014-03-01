@@ -25,8 +25,13 @@ html
 								|Logout
 				block content
 			div.footer
-				img(src="/images/always.png" class="logo al" alt="Always Learning")
-				img(src="/images/pearson_logo.png" class="logo pe" alt="Pearson")
+				div.footer-links
+					a.ge-marketing-link(href='http://www.globalenglish.com') © #{(new Date()).getFullYear()} GlobalEnglish Corporation. 
+					|&nbsp;| All Rights Reserved
+					a.about-link(href='/about') About
+				div.pearson-footer
+					img(src="/images/always.png" class="logo al" alt="Always Learning")
+					img(src="/images/pearson_logo.png" class="logo pe" alt="Pearson")
 
 	script(type="text/javascript", src='/javascripts/angular.min.js')
 	script(type="text/javascript", src='/javascripts/lib/extensions.js')

@@ -3,10 +3,9 @@
 body, html, .wraper {position:relative; height:100%; font-family: arial, helvetica, sans-serif; font-size: 14px;}
 .wraper, .container, .header, .content, .footer {width:100%; clear:both; float:left;}
 .container {min-height:100%;}
-.footer {background-color: #444;height:40px; margin-top: -40px;}
 .header {background-color: #fff;}
 .content {margin:2% 3%; width:94%; padding-bottom: 40px; position: relative;}
-.header, .footer {padding: 10px;}
+.header{padding: 10px;}
 .logo {float: left;}
 .pe{float: right;}
 img, fieldset, input[type=submit], button {border:0;}
