@@ -212,4 +212,8 @@ a {
   clear: both;
   padding: 20px 0;
 }
+.about-page .error {
+  padding: 20px 0;
+  color: #f00;
+}
 /* About page styles --- end */
