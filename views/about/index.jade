@@ -1,6 +1,33 @@
 extends ../shared/layout
 
 block content
-	div.container.padding-20
+	div.container.padding-20.about-page
 
-		| A pet for the GlobalEnglish Pet Projects Team
+		| A pet for the GE Pet Projects Team, and a tool for the GE Product Development Team.
+		if contributors
+			div.contributions
+				h2
+					|Contributors
+				div
+					a(href="https://api.github.com/repos/VigneshThanigaimaniGE/pivotal-helper/contributors")
+						|#{"  "}Auto-generated 
+					|on #{new Date().toUTCString()}.
+				ul.authors
+					for author in contributors
+						li.author
+							a(href="#{author.html_url}")
+									img(src="#{author.avatar_url}")
+							div.author-name
+								|#{author.name || author.login} 
+							div
+								|Contributions: 
+								span.contribution-count
+									|#{author.contributions}
+		if error
+			div.error
+				|Could not fetch data from GitHub.
+
+		div.message
+			h2
+				|Be a contributor to this 
+				a(href="#{repoUrl}") repository
