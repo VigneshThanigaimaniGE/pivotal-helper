@@ -182,6 +182,9 @@ a {
 .print-page-wrap * {
   font-family: arial, helvetica, sans-serif !important;
 }
+.printMe .card-type-text {
+  font-weight: bold;
+}
 /* Print page styles -- end */
 /* About page styles --- start */
 .about-page .contributions {

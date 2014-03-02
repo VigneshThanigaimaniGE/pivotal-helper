@@ -1,4 +1,5 @@
 <div class="printMe">
+	<span class="card-type-text">StoryBoard Card</span>
 	<div class="storycard board-view">
 		<div class="image">
 			<img err-src="/images/default-profile.png" data-ng-src="{{gravatarUrl}}"/>
@@ -19,11 +20,12 @@
 			</div>
 		</div>
 		<div class="story">
-			<p class="title">Story</p>
+			<p class="title">Story</p> <div class="story-id">#{{story.id}}</div>
 			<p>{{story.name}}</p>
 		</div>
 	</div>
 	<div class="divider"></div>
+	<span class="card-type-text">DashBoard Card</span>
 	<div class="storycard desk-view">
 		<div class="image">
 			<img err-src="/images/default-profile.png" data-ng-src="{{gravatarUrl}}"/>
@@ -38,7 +40,7 @@
 			</div>
 		</div>
 		<div class="story">
-			<p class="title">Story</p>
+			<p class="title">Story</p> <div class="story-id">#{{story.id}}</div>
 			<p>{{story.name}}</p>
 		</div>
 		<div class="task">

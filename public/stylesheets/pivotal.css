@@ -57,7 +57,7 @@ border-radius:5px;
 .clear-both {
 clear: both;
 }
-.printMe {clear:both; width: 70%; margin:0 auto;}
+.printMe {clear:both; width: 70%; margin:10px auto;border:1px dashed; padding:10px;}
 .storycard {border: solid 1px; width: 100%; clear: both; margin-bottom: 20px;}
 .board-view { height: 200px;}
 .desk-view {height: 350px;}
@@ -69,12 +69,13 @@ clear: both;
 .desk-view .info span {width: 50%; float: left; font-size: 1.1em; padding-left: 5px; padding-bottom: 5px;}
 .desk-view .story {width: 75%; border-bottom: solid 1px; padding-bottom: 5px;}
 .story-info, .story {width: calc(100% - 151px); float: left;}
+.story .story-id{padding: 10px;font-size: 1.1em;}
 .story-info-div {width: 30%; float: left;}
 .requested-by {width: 40%;}
 .story-info div p {width: 100%; font-size: 1.2em; text-align: center; border-bottom: solid 1px; border-right: solid 1px;}
 .story-info div:last-child p {border-right: 0;}
-.story .title {text-align: left; text-decoration: underline; font-size: 1.1em; padding: 10px;}
-.story p {padding-left: 5px; font-size:16px;}
+.story .title {text-align: left; text-decoration: underline; font-size: 1.1em; padding: 10px;float:left;width:100px;}
+.story p {padding-left: 5px; font-size:16px;clear:both;}
 .task {width: 60%; float: left; margin: 10px 0 0 0;}
 .task ul {padding-left: 20px;}
 li {list-style: none; line-height:1.7;}

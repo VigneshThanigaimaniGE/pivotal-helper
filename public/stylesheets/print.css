@@ -1,4 +1,5 @@
 .header, .footer, [class^="btn-"], .username {display: none;}
-.printMe {position: relative; min-height: 1034px; background-color: #fff; float:left; width: 100%;}
+.printMe {position: relative; min-height: 910px; background-color: #fff; float:left; width: 100%; margin:10px 0; border: 2px dashed; padding:10px;}
 .divider {width:70%; margin:0 auto 20px; clear: both; border-top: 1px dashed #000;}
 .image img {border: solid 1px;}
+.printMe .card-type-text{display:none;}
