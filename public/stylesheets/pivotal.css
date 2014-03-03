@@ -60,14 +60,18 @@ clear: both;
 .printMe {clear:both; width: 70%; margin:10px auto;border:1px dashed; padding:10px;}
 .storycard {border: solid 1px; width: 100%; clear: both; margin-bottom: 20px;}
 .board-view { height: 200px;}
-.desk-view {height: 350px;}
-.image {width: 151px; height: 100%; float: left; border-right: solid 1px;}
+.desk-view {min-height: 350px;display: inline-block;}
+.image {
+    width: 151px;
+    height: 100%;
+    float: left;
+}
 .image img { width:100%;}
 .image p {font-size:1.35em; text-align: center;}
 .desk-view .image {width: 25%;}
 .desk-view .image > p {border-bottom: solid 1px;}
 .desk-view .info span {width: 50%; float: left; font-size: 1.1em; padding-left: 5px; padding-bottom: 5px;}
-.desk-view .story {width: 75%; border-bottom: solid 1px; padding-bottom: 5px;}
+.desk-view .story {width: 75%; border-bottom: solid 1px; padding-bottom: 5px;border-left: solid 1px #000;}
 .story-info, .story {width: calc(100% - 151px); float: left;}
 .story .story-id{padding: 10px;font-size: 1.1em;}
 .story-info-div {width: 30%; float: left;}
@@ -76,7 +80,7 @@ clear: both;
 .story-info div:last-child p {border-right: 0;}
 .story .title {text-align: left; text-decoration: underline; font-size: 1.1em; padding: 10px;float:left;width:100px;}
 .story p {padding-left: 5px; font-size:16px;clear:both;}
-.task {width: 60%; float: left; margin: 10px 0 0 0;}
+.task {width: 60%; float: left; padding:10px 0; border-left: solid 1px #000;min-height: 350px;}
 .task ul {padding-left: 20px;}
 li {list-style: none; line-height:1.7;}
 .info span {height: auto;}
