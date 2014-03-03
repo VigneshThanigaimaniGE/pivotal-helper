@@ -34,10 +34,17 @@ a {
   padding: 0;
 }
 .footer .footer-links {
-  background: #fff;
-  padding: 0 15px;
+  background: #f2f2f2;
+  padding: 10px;
+  text-align: center;
 }
-.footer .footer-links .about-link {
+.footer .footer-links a {
+  text-decoration: none;
+}
+.footer .footer-links a:hover {
+  color: #444;
+}
+.footer .about-link {
   float: right;
 }
 /* Login form styles -- start */
