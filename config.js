@@ -8,6 +8,10 @@ var config = {
 	redis:{
 		port:process.env.REDIS_PORT || 18708,
 		host:process.env.REDIS_HOST || "pub-redis-18708.us-central1-1-1.gce.garantiadata.com"
+	},
+	gitHub:{
+		username:process.env.GITHUB_USERNAME|| "githubusername",
+		password:process.env.GITHUB_PASSWORD|| "githubpassword"
 	}
 }
 module.exports = config;

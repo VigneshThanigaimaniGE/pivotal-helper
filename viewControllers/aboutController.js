@@ -4,9 +4,8 @@ module.exports.controller = function(app){
 	app.get('/about',function(req,res){
 		GitHub.getContributions(function(err,contributors){
 			var errorMessage;
-			if(err)
+			if(err &&  err.message)
 				errorMessage = err.message;
-
 			res.render('about/index',{title:"GE Pivotal Helper | About",contributors:JSON.parse(contributors),
 				repoUrl:repoUrl,
 				error:errorMessage})
