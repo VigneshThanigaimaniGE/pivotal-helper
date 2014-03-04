@@ -189,7 +189,13 @@ a {
 .print-page-wrap * {
   font-family: arial, helvetica, sans-serif !important;
 }
+.print-page-wrap .no-stories-message {
+  display: none;
+}
 .printMe .divider {
+  display: none;
+}
+.printMe .invisible-divider {
   display: none;
 }
 .printMe .card-type-text {

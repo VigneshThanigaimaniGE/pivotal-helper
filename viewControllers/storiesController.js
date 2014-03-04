@@ -17,14 +17,11 @@ module.exports.controller = function(app){
 			})[0].project_name;
 			
 			pivotal.getMyStories(projectId,function(err,stories){
-				
 				RedisHelper.getGravatarEmail(req.user.username,function(err,email){
 					var user = req.user;
 					user.gravatarEmail = email;
 					res.render("project/index",{title:projectName,stories:stories,user:user});
 				});
-
-				
 			});
 		}
 		catch(e){

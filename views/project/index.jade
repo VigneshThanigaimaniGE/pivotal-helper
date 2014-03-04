@@ -12,6 +12,6 @@ block content
 			button.btn-roundedCorner(onclick="javascript:window.print();")
 				|Print Stories
 		div.printablediv
-			storycard(data-ng-repeat="story in stories", data-ng-if="stories.length>0")
-		div(data-ng-cloak, data-ng-if="stories.length==0")
+			storycard(data-ng-repeat="story in stories", data-ng-if="stories.length>0" emitevent)
+		div(class='no-stories-message',data-ng-cloak, data-ng-if="stories.length==0")
 			|You have no stories in this project in the current sprint
