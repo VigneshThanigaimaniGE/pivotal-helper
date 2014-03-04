@@ -189,6 +189,9 @@ a {
 .print-page-wrap * {
   font-family: arial, helvetica, sans-serif !important;
 }
+.printMe .divider {
+  display: none;
+}
 .printMe .card-type-text {
   font-weight: bold;
 }
