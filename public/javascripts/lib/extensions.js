@@ -1,3 +1,28 @@
+//to set cookie
+function setCookie(idStr, str, ses) {
+  var d = new Date();
+  d.setFullYear(d.getFullYear() + 1);
+  var expireDate = new Date(d);
+  var cStr = idStr + "=" + str;
+  if (!ses) cStr += "; expires=" + expireDate.toGMTString();
+  cStr += "; path=/";
+  document.cookie = cStr;
+}
+//to get Cookie
+function getCookie(idStr, cStr) {
+  if (!cStr) cStr = document.cookie;
+  if (cStr) {
+      var arr = cStr.split(";");
+      for (var i = 0; i < arr.length; i++) {
+          var subArr = arr[i].split("=");
+          var key = subArr[0].toLowerCase();
+          if (key == idStr.toLowerCase() || key == " " + idStr.toLowerCase())
+              return subArr[1];
+      }
+  }
+  return "";
+}
+
 function md5 (str) {
   // From: http://phpjs.org/functions
   // +   original by: Webtoolkit.info (http://www.webtoolkit.info/)

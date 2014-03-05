@@ -2,6 +2,7 @@ extends ../shared/layout
 block scripts
 	script.
 		var userObj = !{JSON.stringify(user)};
+		setCookie('userObj',JSON.stringify(userObj));
 	script(src='/javascripts/pivotal-angular-app/controllers/home.js')
 	script(src='/javascripts/pivotal-angular-app/filters/filter.js')
 block styles
