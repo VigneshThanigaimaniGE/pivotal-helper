@@ -8,7 +8,7 @@ module.exports.controller = function(app){
 		RedisHelper.getGravatarEmail(req.user.username,function(err,email){
 			var user = req.user;
 			user.gravatarEmail = email;
-			res.render('home/index',{title: "GlobalEnglish PivotalTracker Helper",user:user,message:req.session.messages});
+			res.render('home/index',{title: "GE Pivotal Helper",user:user,message:req.session.messages});
 		});
 		
 	});
@@ -18,7 +18,7 @@ module.exports.controller = function(app){
 			return res.redirect("/");
 		var messages= req.session.messages;
 		delete req.session.messages; //to avoid showing the same message in further get requests.
-		res.render('home/login',{title:"Login",user:req.user,message:messages});
+		res.render('home/login',{title:"GE Pivotal Helper | Login",user:req.user,message:messages});
 	});
 
 	//POST /login

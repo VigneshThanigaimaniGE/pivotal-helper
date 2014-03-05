@@ -7,7 +7,7 @@ module.exports.controller = function(app){
 			if(err &&  err.message)
 				errorMessage = err.message;
 			res.render('about/index',{title:"GE Pivotal Helper | About",contributors:JSON.parse(contributors),
-				repoUrl:repoUrl,
+				repoUrl:repoUrl,user:req.user,
 				error:errorMessage})
 		})
 		

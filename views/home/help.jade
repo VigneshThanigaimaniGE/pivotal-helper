@@ -1,0 +1,37 @@
+extends ../shared/layout
+
+block content
+	div.help-page
+		h1.faq-title FAQ
+		ol.faq-container
+			li.question-answer
+				div.question
+					| Which login credentials do I use?
+				div.answer
+					| You should use your PivotalTracker username/email and password to login.
+			li.question-answer
+				div.question
+					| What is Gravatar?
+				div.answer
+					| Your Gravatar is an image that follows you from site to site, as your globally recognized avatar.
+					| This application uses gravatar image, instead of image uploads, to reduce complexity of the application, and server storage.
+					| Registering in 
+					a(href='http://en.gravatar.com',target="_blank") gravatar.com
+					|&nbsp;should be fairly simple.
+			li.question-answer
+				div.question
+					| Is my username and password compromised?
+				div.answer
+					| This application does not save your login credentials. However, if provided, 
+					| it does store your gravatar email-id.
+			li.question-answer
+				div.question
+					| How do I change my profile picture?
+				div.answer
+					| Change your profile picture at gravatar.com, it will be reflected in the application
+			li.question-answer
+				div.question
+					| How do I set the profile picture after logging-in to Pivotal Helper?
+				div.answer
+					| After you set your profile picture at en.gravatar.com, log-out of Pivotal Helper, 
+					| and provide your gravatar email id, while logging in the next time.

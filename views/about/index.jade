@@ -1,9 +1,12 @@
 extends ../shared/layout
 
 block content
-	div.container.padding-20.about-page
+	div.padding-20.about-page
 
-		| A pet for the GE Pet Projects Team, and a tool for the GE Product Development Team.
+		h2.title
+			|GE Pivotal Helper (Beta) v1.0
+		br
+		| An application to help the us in the agile process, with tools such as Story Card generator, Task Based Burn Down charts, etc.
 		if contributors
 			div.contributions
 				h2
@@ -11,7 +14,7 @@ block content
 				div
 					a(href="https://api.github.com/repos/VigneshThanigaimaniGE/pivotal-helper/contributors", target="_blank")
 						|#{"  "}Auto-generated 
-					|on #{new Date().toUTCString()}.
+					|on #{new Date().toUTCString()} from GitHub Log.
 				ul.authors
 					for author in contributors
 						li.author

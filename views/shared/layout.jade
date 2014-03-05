@@ -10,24 +10,27 @@ html
 		link(rel='stylesheet', href='/stylesheets/style.css')
 		link(rel='stylesheet', href='/stylesheets/pivotal.css')
 		link(rel='stylesheet', href='/stylesheets/print.css', media='print')
+		link(rel='stylesheet', href='/stylesheets/font-awesome/css/font-awesome.css')
 		link(href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700', rel='stylesheet', type='text/css')
 		block styles
 	body
 		div.wraper
 			div.container
 				div.header.default-shadow-header
-					a(href='/')
+					div
 						img(src="/images/gelogo.png" class="logo ge" alt="GlobalEnglish")
 						img(src="/images/pivotal_logo.png" class="logo pt" alt="Pivotal Tracker")
+						a.home-icon(href='/')
+							i.fa.fa-home
 					if user
-						div.logout-link
-							a(href="/logout")
-								|Logout
+						a.logout-link(href='/logout')
+							i.fa.fa-sign-out
 				block content
 			div.footer
 				div.footer-links
 					a.ge-marketing-link(href='http://www.globalenglish.com',target="_blank") © #{(new Date()).getFullYear()} GlobalEnglish Corporation. 
 					|&nbsp;| All Rights Reserved
+					a.help-link(href='/help') Help
 					a.about-link(href='/about') About
 				div.pearson-footer
 					img(src="/images/always.png" class="logo al" alt="Always Learning")
