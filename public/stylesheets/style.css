@@ -231,6 +231,12 @@ a {
   clear: both;
   padding: 20px 0;
 }
+.about-page .message .issues {
+  padding: 10px 0;
+}
+.about-page .message .issues a {
+  text-decoration: none;
+}
 .about-page .error {
   padding: 20px 0;
   color: #f00;

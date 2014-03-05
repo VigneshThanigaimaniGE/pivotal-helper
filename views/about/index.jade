@@ -9,13 +9,13 @@ block content
 				h2
 					|Contributors
 				div
-					a(href="https://api.github.com/repos/VigneshThanigaimaniGE/pivotal-helper/contributors")
+					a(href="https://api.github.com/repos/VigneshThanigaimaniGE/pivotal-helper/contributors", target="_blank")
 						|#{"  "}Auto-generated 
 					|on #{new Date().toUTCString()}.
 				ul.authors
 					for author in contributors
 						li.author
-							a(href="#{author.html_url}")
+							a(href="#{author.html_url}",target="_blank")
 									img(src="#{author.avatar_url}")
 							div.author-name
 								|#{author.name || author.login} 
@@ -30,4 +30,8 @@ block content
 		div.message
 			h2
 				|Be a contributor to this 
-				a(href="#{repoUrl}") repository
+				a(href="#{repoUrl}", target="_blank") repository
+			div.issues
+				|Report any issues at &nbsp;
+				a(href="https://github.com/VigneshThanigaimaniGE/pivotal-helper/issues", target="_blank")
+					|GitHub
