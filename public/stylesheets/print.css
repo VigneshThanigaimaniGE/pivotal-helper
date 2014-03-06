@@ -18,3 +18,4 @@ h3 {font-size:18px;}
 .printablediv .invisible-divider:last-child{display: none;}
 .printablediv .printMe:last-child{min-height: inherit;}
 .container.forprintpage{padding-bottom: 0;}
+.board-view{display: block !important;}
