@@ -13,7 +13,7 @@ app.directive('storycard',[function(){
 					$secondDivider = $(element).find('.invisible-divider');
 					//check if the cumulative height of board and desk view is greater than 800px
 					//assuming that 800px is threshold value for a page.
-					if($boardView.height() + $deskView.height() >= 750){
+					if($boardView.height() + $deskView.height() >= 800){
 						//increase the divider height in such a way that the boardview consumes the whole page
 						$(element).find(".divider").height(850 - $boardView.height());
 						//increase the deskview height in such a way, that it consumes the whole page. 
