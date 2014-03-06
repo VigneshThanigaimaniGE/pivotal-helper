@@ -1,9 +1,6 @@
 * {
 padding:0;
 margin:0;
--webkit-box-sizing:border-box;
--moz-box-sizing:border-box;
--o-box-sizing:border-box;
 	
 }
 
@@ -20,7 +17,7 @@ margin:0;
 
 .grid.equalHeight, .grid.no-margin.faux {overflow: hidden;
 box-orient: horizontal; box-pack: start; box-align: start;
-display: -webkit-box; -webkit-box-orient: horizontal; -webkit-box-pack: start; -webkit-box-align: start;
+-webkit-box-orient: horizontal; -webkit-box-pack: start; -webkit-box-align: start;
  -moz-box-orient: horizontal; -moz-box-pack: start; -moz-box-align: start;
 }
 .grid.equalHeight > [class^="col"], .grid.no-margin.faux > [class^="col"] {margin-bottom: -99979px; padding-bottom: 99999px; }
