@@ -15,8 +15,9 @@ app.directive('storycard',[function(){
 					//assuming that 800px is threshold value for a page.
 					if($boardView.height() + $deskView.height() >= 750){
 						//increase the divider height in such a way that the boardview consumes the whole page
-						$(element).find(".divider").height(940 - $boardView.height());
+						$(element).find(".divider").height(850 - $boardView.height());
 						//increase the deskview height in such a way, that it consumes the whole page. 
+						adjustSecondCardOnScreen($deskView);
 						adjustSecondCardOnScreen($deskView);
 						adjustSecondCardOnScreen($deskView);
 						// if($deskView.height()<=600) 
@@ -40,8 +41,8 @@ var adjustSecondCardOnScreen=function(element){
 	} 
 	else if($elem.height() >=610){
 		//make the fonts of tasks slightly lesser
-		var currFontSize = parseInt($elem.find('.task').css('font-size'));
-		$elem.find('.task').css("font-size",(currFontSize-2)+"px");
+		var currFontSize = parseInt($elem.find('.tasks').css('font-size'));
+		$elem.find('.tasks').css("font-size",(currFontSize-2)+"px");
 	}
 }
 app.directive('emitevent', [function(){

@@ -5,7 +5,8 @@ block scripts
 		var userObj = !{JSON.stringify(user)};
 	script(src='/javascripts/pivotal-angular-app/directives/storycard.js')
 	script(src='/javascripts/pivotal-angular-app/controllers/stories.js')
-
+block styles
+	link(href='/stylesheets/structure.css',rel='stylesheet')
 block content
 	div.content.print-page-wrap(ng-app='gePivotalApp',ng-controller='stories')
 		div.printBtn

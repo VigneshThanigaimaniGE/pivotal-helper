@@ -1,53 +1,89 @@
 <div class="printMe">
-	<span class="card-type-text">StoryBoard Card</span>
-	<div class="storycard board-view">
-		<div class="image">
-			<img err-src="/images/default-profile.png" data-ng-src="{{gravatarUrl}}"/>
-			<p>{{story.owned_by.name}}</p>
-		</div>
-		<div class="story-info">
-			<div class="story-info-div">
-				<p>Type</p>
-				<p>{{story.story_type}}</p>
+	<div class="printpageWraper ">
+		<span class="card-type-text">StoryBoard Card</span>
+			<div class="grid no-margin equal container board-view">
+				<div class="col3 left-column">
+					<div  class="general withMargin user">
+						<div class="col wrapcentering">
+							<img class="user-image" err-src="/images/default-profile.png" data-ng-src="{{gravatarUrl}}" alt="" />
+						</div>
+						<div class="col text-center">
+							<h2 class="bold">{{story.owned_by.name}}</h2>
+						</div>
+					</div>
+				</div>
+				<div class="col9 right-column">
+					 <div  class="general withMargin headerWrap">
+						<div class="col">
+							 <div  class="grid equalHeight">
+								<div class="col4">
+									<h3 class="story-type-text">{{story.story_type}}</h3>
+									<p><span>(Type)</span></p>
+								</div>
+								<div class="col4">
+									<h3>{{story.estimate || "NA"}}</h3>
+									<p><span>(Points)</span></p>
+								</div>
+								<div class="col4">
+									<h3>{{story.requested_by.name}}</h3>
+									<p><span>(Requested By)</span></p>
+								</div>
+							</div>
+						</div>
+						<div class="col details">
+							<h4>Details</h4>
+							<p>{{story.name}}</p>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="story-info-div">
-				<p>Point</p>
-				<p>{{story.estimate || "NA"}}</p>
-			</div>
-			<div class="story-info-div requested-by">
-				<p>Requested By</p>
-				<p>{{story.requested_by.name}}</p>
-			</div>
 		</div>
-		<div class="story">
-			<p class="title">Story</p> <div class="story-id">#{{story.id}}</div>
-			<p>{{story.name}}</p>
-		</div>
-	</div>
 	<div class="divider"></div>
-	<span class="card-type-text">DashBoard Card</span>
-	<div class="storycard desk-view">
-		<div class="image">
-			<img err-src="/images/default-profile.png" data-ng-src="{{gravatarUrl}}"/>
-			<p>{{story.owned_by.name}}</p>
-			<div class="info">
-				<span>Type</span>
-				<span>{{story.story_type}}</span>
-				<span>Point</span>
-				<span>{{story.estimate || "NA"}}</span>
-				<span>Requested By</span>
-				<span>{{story.requested_by.name}}</span>
+	<div class="printpageWraper ">
+		<span class="card-type-text">Dashboard Card</span>
+			<div class="grid no-margin equal container desk-view">
+				<div class="col3 left-column">
+					<div  class="general withMargin user">
+						<div class="col wrapcentering">
+							<img class="user-image" err-src="/images/default-profile.png" data-ng-src="{{gravatarUrl}}" alt="" />
+						</div>
+						<div class="col text-center">
+							<h2 class="bold">{{story.owned_by.name}}</h2>
+						</div>
+					</div>
+				</div>
+				<div class="col9 right-column">
+					 <div  class="general withMargin headerWrap">
+						<div class="col">
+							 <div  class="grid equalHeight">
+								<div class="col4">
+									<h3 class="story-type-text">{{story.story_type}}</h3>
+									<p><span>(Type)</span></p>
+								</div>
+								<div class="col4">
+									<h3>{{story.estimate || "NA"}}</h3>
+									<p><span>(Points)</span></p>
+								</div>
+								<div class="col4">
+									<h3>{{story.requested_by.name}}</h3>
+									<p><span>(Requested By)</span></p>
+								</div>
+							</div>
+						</div>
+						<div class="col details">
+							<h4>Details</h4>
+							<p>{{story.name}}</p>
+						</div>
+						<div class="col tasks">
+							<h4>Tasks</h4>
+							<ul>
+								<li data-ng-repeat="task in story.tasks"><input type="checkbox" /><label>{{task.description}}</label></li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="story">
-			<p class="title">Story</p> <div class="story-id">#{{story.id}}</div>
-			<p>{{story.name}}</p>
-		</div>
-		<div class="task">
-			<ul>
-				<li data-ng-repeat="task in story.tasks"><label><input type="checkbox" />{{task.description}}</label></li>
-			</ul>
-		</div>
-	</div>
-	<div class="invisible-divider"></div>
+			<div class="invisible-divider"></div>
 </div>
+

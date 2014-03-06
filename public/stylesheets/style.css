@@ -253,6 +253,8 @@ a {
 }
 .printMe .card-type-text {
   font-weight: bold;
+  display: inline-block;
+  padding-bottom: 10px;
 }
 /* Print page styles -- end */
 /* About page styles --- start */
