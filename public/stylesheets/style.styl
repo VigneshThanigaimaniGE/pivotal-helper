@@ -258,7 +258,7 @@ a
 /* Print page styles -- start*/
 .print-page-wrap 
 	*
-		font-family: arial, helvetica, sans-serif !important;
+		font-family: arial, helvetica, sans-serif ;
 	.no-stories-message
 		display none
 .printMe
@@ -270,7 +270,33 @@ a
 		font-weight bold
 		display:inline-block;
 		padding-bottom:10px;
-		
+
+.printWindow .individual-print-button
+	display none
+.printWindow .board-view, .printWindow .desk-view
+	min-height inherit
+	padding-bottom 0
+
+.board-view, .desk-view
+	position relative
+.printWindow .left-column {
+	border-right: solid 1px #999 !important;
+}
+
+.individual-print-button
+	position: absolute;
+	right: -35px;
+	float: left;
+	padding: 2px 15px;
+	font-size: 25px;
+	background: #f0f8ff;
+	border-radius: 20px;
+	margin: 0 10px;
+	top: -12px;
+	cursor: pointer
+	color: #0b7ff
+	&:hover
+		color #fff
 /* Print page styles -- end */
 
 /* About page styles --- start */

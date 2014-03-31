@@ -134,7 +134,7 @@ describe("User login flow",function(){
 	})
 });
 
-describe.only("Project page",function(){
+describe("Project page",function(){
 	var loggedInAgent ;
 	this.timeout(5000);
 	before(function(done){

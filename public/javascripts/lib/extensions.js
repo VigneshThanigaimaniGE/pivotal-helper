@@ -307,3 +307,20 @@ function utf8_encode (argString) {
 
   return utftext;
 }
+
+////////////////////////////////////////////
+/////////////getHTML() /////////////////////
+///////////////////////////////////////////
+//To get outerHtml of an element /////////
+var getHTML= function(who, deep){
+    if(!who || !who.tagName) return '';
+    var txt, ax, el= document.createElement("div");
+    el.appendChild(who.cloneNode(false));
+    txt= el.innerHTML;
+    if(deep){
+        ax= txt.indexOf('>')+1;
+        txt= txt.substring(0, ax)+who.innerHTML+ txt.substring(ax);
+    }
+    el= null;
+    return txt;
+}
