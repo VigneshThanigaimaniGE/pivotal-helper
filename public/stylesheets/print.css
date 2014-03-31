@@ -20,3 +20,4 @@ h3 {font-size:18px;}
 .container.forprintpage{padding-bottom: 0;}
 .board-view{display: block !important;}
 .individual-print-button{display:none !important;}
+.hide, .selectStory {display: none;}
