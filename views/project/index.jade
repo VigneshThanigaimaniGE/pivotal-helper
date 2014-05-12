@@ -10,6 +10,9 @@ block styles
 block content
 	div.content.print-page-wrap(ng-app='gePivotalApp',ng-controller='stories')
 		div.printBtn
+			select(ng-model='selectedView' ng-options='view.value as view.text for view in views' ng-change='changeView()')
+			br
+			br
 			button.btn-roundedCorner(onclick="javascript:window.print();")
 				|Print Stories
 		div.printablediv

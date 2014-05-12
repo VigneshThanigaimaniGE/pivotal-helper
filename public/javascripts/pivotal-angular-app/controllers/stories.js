@@ -1,11 +1,31 @@
 app.controller('stories',function($scope){
 	$scope.stories = renderedStories;
 	$scope.user = userObj;
-
+	$scope.views = [
+                    {
+                        value: "board",
+                        text: "Board View"
+                    },
+                    {
+                        value: "desk",
+                        text: "Desk View"
+                    }
+                    ];
 	$scope.gravatarUrl="";
+	$scope.selectedView = 'board';
 	if($scope.user.gravatarEmail)
 		$scope.gravatarUrl = "http://gravatar.com/avatar/"+md5($scope.user.gravatarEmail)+"?s=150";
-	
+
+	$scope.changeView = function() {
+		if($scope.selectedView == 'board') {
+			angular.element('.board').show();
+			angular.element('.desk').hide();
+		} else {
+			angular.element('.desk').show();
+			angular.element('.board').hide();
+		}
+	}
+
 	//function to print each story/board card individually.
 	$scope.printCard = function(obj){
 		var printElement = $(obj.target).parent();
@@ -31,14 +51,13 @@ app.controller('stories',function($scope){
 					newWindow.print();
 				}
 				else if(/MSIE/.test(window.navigator.userAgent)){
-					//print is currently not working in IE for some reason, need to fix this. 
-					//thus giving user a message to manually print it. 
+					//print is currently not working in IE for some reason, need to fix this.
+					//thus giving user a message to manually print it.
 					newWindow.alert("Please Print by either \n1.Right Click -> Print\n 2.Ctrl+P ");
-					newWindow.print(); //do not close for IE. 
-					
+					newWindow.print(); //do not close for IE.
 				}
 				else{
-					//print then close after particular time, works in chrome. 
+					//print then close after particular time, works in chrome.
 					newWindow.print();
 					setTimeout(function(){
 						newWindow.close();
@@ -49,7 +68,5 @@ app.controller('stories',function($scope){
 			catch(e){}
 		},10);
 		newWindow.document.head.appendChild(style);
-
-		
 	}
 });

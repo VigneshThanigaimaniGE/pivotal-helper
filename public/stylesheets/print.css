@@ -1,13 +1,14 @@
+@page { size: A4; margin: 0; }
 .header, .footer, [class^="btn-"], .username {display: none;}
-.printMe {position: relative; min-height: 950px; background-color: #fff; float:left; width: 100%; margin:15px 0; border: none; padding:10px;}
-.printMe .divider {width:70%; margin:20px auto; clear: both; display:block;}
+.printMe {position: relative; background-color: #fff; float:left; width: 100%; margin:15px 0; border: none; padding-top:10px; padding-left: 10px;}
 .printMe .invisible-divider{width:100%; clear:both;border-top: 1px dashed #000;display:block;}
 .image img {border: solid 1px;}
 .printMe .card-type-text{display:none;}
 .printBtn{display:none;}
-.printpageWraper {width:98% !important;}
+.board {width:50% !important; float: left;}
+.desk {width:80% !important;}
 [class^="col"] {background-color:transparent;}
-h3 {font-size:18px;}
+h3 {font-size:14px;}
 [class^="col"] [class^="col"] [class^="col"] {background-color:transparent;}
 .user [class^="col"], .general.withMargin > [class^="col"] {border:0;}
 .right-column .general.withMargin > [class^="col"]:first-child [class^="col"] {background-color:#f1f1f1;}
@@ -19,5 +20,4 @@ h3 {font-size:18px;}
 .printablediv .printMe:last-child{min-height: inherit;}
 .container.forprintpage{padding-bottom: 0;}
 .board-view{display: block !important;}
-.individual-print-button{display:none !important;}
-.hide, .selectStory {display: none;}
+.hide, .selectStory, input[type=checkbox] {display: none;}
