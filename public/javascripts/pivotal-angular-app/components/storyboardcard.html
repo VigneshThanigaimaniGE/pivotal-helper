@@ -29,43 +29,6 @@
       </div>
     </div>
   </div>
-
-  <div class="desk printpageWraper " style="display:none;">
-    <input type='checkbox' class='selectStory' checked onclick="$(this).parent().parent().toggleClass('hide');">
-    <span class="card-type-text">Dashboard Card</span>
-      <div class="grid no-margin equal container desk-view">
-        <div class="col9 right-column">
-           <div  class="general withMargin headerWrap">
-            <div class="col">
-               <div  class="grid equalHeight">
-                <div class="col4">
-                  <h3 class="story-type-text">{{story.id}}</h3>
-                  <p><span>(Story Id)</span></p>
-                </div>
-                <div class="col4">
-                  <h3 class="story-type-text">{{story.story_type}}</h3>
-                  <p><span>(Type)</span></p>
-                </div>
-                <div class="col4">
-                  <h3>{{story.estimate || "NA"}}</h3>
-                  <p><span>(Points)</span></p>
-                </div>
-              </div>
-            </div>
-            <div class="col details">
-              <h4>Story</h4>
-              <p>{{story.name}}</p>
-            </div>
-            <div class="col tasks">
-              <h4>Tasks</h4>
-              <ul>
-                <li data-ng-repeat="task in story.tasks"><input type="checkbox" data-ng-model="task.complete" /><label>{{task.description}}</label></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-      <div class="invisible-divider"></div>
+  <div class="invisible-divider"></div>
 </div>
 

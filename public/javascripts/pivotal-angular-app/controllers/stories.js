@@ -1,29 +1,29 @@
 app.controller('stories',function($scope){
 	$scope.stories = renderedStories;
 	$scope.user = userObj;
-	$scope.views = [
-                    {
-                        value: "board",
-                        text: "Board View"
-                    },
-                    {
-                        value: "desk",
-                        text: "Desk View"
-                    }
-                    ];
 	$scope.gravatarUrl="";
-	$scope.selectedView = 'board';
 	if($scope.user.gravatarEmail)
 		$scope.gravatarUrl = "http://gravatar.com/avatar/"+md5($scope.user.gravatarEmail)+"?s=150";
 
-	$scope.changeView = function() {
-		if($scope.selectedView == 'board') {
-			angular.element('.board').show();
-			angular.element('.desk').hide();
-		} else {
-			angular.element('.desk').show();
-			angular.element('.board').hide();
+	$scope.adjustCardSize = function() {
+		$('.tempDiv').remove();
+		var elements = $('.printMe:not(.hide)'), divHeight=0, prevDiv, prevDivHeight, currentDiv;
+		for (var i = 0; i < elements.length; i++) {
+			$(elements[i]).attr('id', (i+1));
 		}
+		elements.each(function() {
+			currentDiv = $(this).attr('id');
+			currentDivHeight = $('#'+currentDiv).height();
+			divHeight += currentDivHeight;
+			if(divHeight > 770) {
+				prevDiv = currentDiv - 1;
+				prevDivHeight = divHeight - (currentDivHeight);
+				$('#'+prevDiv).append('<div class="tempDiv" id="tempDiv'+prevDiv+'">&nbsp;</div>');
+				$('#tempDiv'+prevDiv).height(750 - prevDivHeight);
+				divHeight = $('#'+currentDiv).height();
+			}
+		});
+		window.print();
 	}
 
 	//function to print each story/board card individually.
